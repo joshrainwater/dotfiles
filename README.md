@@ -7,7 +7,7 @@ and chat software I'm totally good to go. This is the config for
 how I'm currently working.
 
 ## Things to do in Windows (Assuming WSL like I currently use)
-- Install a NerdFont for icons. I use JetBrains
+- Install a NerdFont for icons. I most commonly use JetBrains or FiraCode
     - https://www.nerdfonts.com/font-downloads
 - Install WindowsTerminal, WSL, Ubuntu, all that jazz.
-- Fix margins on Windows Terminal; by default there is a lot of space.
+- Remove margins on Windows Terminal; by default there is a lot of space.

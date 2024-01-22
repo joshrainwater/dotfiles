@@ -22,7 +22,7 @@ source $HOME/dotfiles/bash/.aliases
 
 # Colorize and Upgrade Basic Commands
 alias ls="ls -CF --color=auto"
-alias ll="ls -lhA"
+alias ll="ls -lash"
 alias l.="ls -d .* --color=auto"
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'

@@ -25,13 +25,15 @@ lsp_zero.setup_servers({'html', 'cssls', 'eslint', 'phpactor', 'volar', 'gdscrip
 
 local home = os.getenv('HOME')
 local dotfiles = os.getenv('DOTFILES')
+print( dotfiles .. "/php/php-cs-fixer.laravel.php"
+)
 require('lspconfig').phpactor.setup({
     on_attach = on_attach,
     init_options = {
         ["language_server_psalm.enabled"] = false,
         ["language_server_php_cs_fixer.enabled"] = true,
         ["language_server_php_cs_fixer.bin"] = home .. "/.local/bin/php-cs-fixer",
-        ["language_server_php_cs_fixer.config"] = dotfiles .. "/phpactor/php-cs-fixer.laravel.php"
+        ["language_server_php_cs_fixer.config"] = dotfiles .. "/php/php-cs-fixer.laravel.php"
     }
  })
 

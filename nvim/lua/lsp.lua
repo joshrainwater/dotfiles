@@ -31,7 +31,7 @@ require('lspconfig').phpactor.setup({
         ["language_server_psalm.enabled"] = false,
         ["language_server_php_cs_fixer.enabled"] = true,
         ["language_server_php_cs_fixer.bin"] = home .. "/.local/bin/php-cs-fixer",
-        ["language_server_php_cs_fixer.config"] = dotfiles .. "phpactor/php-cs-fixer.laravel.php"
+        ["language_server_php_cs_fixer.config"] = dotfiles .. "/phpactor/php-cs-fixer.laravel.php"
     }
  })
 

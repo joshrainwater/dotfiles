@@ -1,4 +1,5 @@
 export PATH=$PATH:~/.local/bin
+export DOTFILES=$HOME/dotfiles
 
 if [ -z "$SSH_AUTH_SOCK" ] ; then
 	  eval `ssh-agent -s`
@@ -29,6 +30,6 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # Specific aliases and setup for your job.
-if [ -f $HOME/dotfiles/bash/.jobspecific ]; then
-    source $HOME/dotfiles/bash/.jobspecific
+if [ -f $DOTFILES/bash/.jobspecific ]; then
+    source $DOTFILES/bash/.jobspecific
 fi

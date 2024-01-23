@@ -101,10 +101,7 @@ require("lazy").setup({
     },
 
     -- Colors
-    {"sainnhe/everforest"}, 
-    {"EdenEast/nightfox.nvim"},
     {"folke/tokyonight.nvim"},
-    {"rose-pine/neovim"}
 })
 
 require("lsp")
@@ -113,7 +110,9 @@ require("set")
 require("remap")
 
 -- ColorScheme Setup
-vim.cmd "let g:everforest_background = 'hard'"
-vim.cmd.colorscheme("tokyonight")
+require('tokyonight').setup({
+    style = 'storm',
+})
+vim.cmd("colorscheme tokyonight")
 vim.api.nvim_set_hl(50, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(50, "NormalFloat", { bg = "none" })

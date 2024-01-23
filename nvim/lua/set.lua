@@ -1,5 +1,5 @@
 -- Set relative line numbers
-vim.opt.nu = true
+vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Always use 4 spaces because that's the best

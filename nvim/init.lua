@@ -7,6 +7,7 @@
 -- Set <space> as the leader key
 -- Before everything else happens
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- [[Install `lazy.nvim` plugin manager ]]
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -54,8 +55,17 @@ require("lazy").setup({
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons"
-        }
+        },
+        config = function ()
+            require("telescope").setup({
+                defaults = {
+                    path_display = {"smart"},
+                }
+            })
+        end
     },
+
+    -- This is one I'm not sure I want to keep yet.
     {"windwp/nvim-autopairs", 
         config = function ()
             require("nvim-autopairs").setup({
@@ -81,6 +91,40 @@ require("lazy").setup({
         end
     },
    
+    {"tpope/vim-commentary"},
+    {"tpope/vim-sleuth"},
+    {"whatyouhide/vim-textobj-xmlattr",
+        dependencies = {
+            "kana/vim-textobj-user"
+        }
+    },
+    {"AndrewRadev/splitjoin.vim",
+        config = function()
+            vim.g.splitjoin_trailing_comma = 1
+            vim.g.splitjoin_php_method_chain_full = 1
+        end
+    },
+
+    {"nvim-tree/nvim-tree.lua",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons"      
+        },
+        config = function ()
+            require("nvim-tree").setup({
+               renderer = {
+                    group_empty = true,
+                    icons = {
+                        show = {
+                            folder_arrow = false
+                        }
+                    },
+                    indent_markers = {
+                        enable = true
+                    }
+               }  
+            })
+        end
+    },
     {"folke/trouble.nvim",
         dependencies = {
             "nvim-tree/nvim-web-devicons"
@@ -88,21 +132,25 @@ require("lazy").setup({
         opts = {}
     },
 
-    {"folke/noice.nvim", 
-        event = "VeryLazy",
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-        },
-    },
-
-    -- Lets see how this goes...
     {"Exafunction/codeium.vim",
         event = "BufEnter",
+        config = function ()
+            vim.keymap.set('i', '<C-Space>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+            vim.keymap.set('i', '<C-j>', function () return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
+            vim.keymap.set('i', '<C-k>', function () return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
+            vim.keymap.set('i', '<C-x>', function () return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+        end,
+        opts = {
+            no_default_keymaps = true
+        }
     },
 
     -- Colors
     {"folke/tokyonight.nvim"},
 })
+
+-- I'll move this later.
+vim.g.codeium_disable_bindings = true
 
 require("lsp")
 require("plugins")

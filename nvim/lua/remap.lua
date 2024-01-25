@@ -1,17 +1,30 @@
 vim.keymap.set("n", "<leader>of", vim.cmd.Ex)
 
--- CTRL-v and CTRL-V can't be used from WSL
-vim.keymap.set("n", "<leader>v", "<C-V")
+-- Remap indentation to keep highlight
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
 
+-- Move selected lines up or down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Maintain cursor position when yanking
+vim.keymap.set("v", "y", "myy`y")
+
 -- Global copy-paste to clipboard.
+-- I don't think this works in WSL
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
+-- Easy append of semicolon and comma at end of line
+vim.keymap.set("i", ";;", "<Esc>A;")
+vim.keymap.set("i", ",,", "<Esc>A,")
+
 vim.keymap.set("n", "Q", "<nop>")
+
+-- NvimTreeToggle
+vim.keymap.set("n", "<leader>n", vim.cmd.NvimTreeFindFileToggle)
 
 -- Quickfix menu
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -71,5 +84,6 @@ vim.keymap.set('n', '<leader>so', builtin.oldfiles, { desc = "[S]earch [O]ld Fil
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = "[S]earch [W]ord"})
 vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = "[S]earch [G]rep on Git Root"})
 vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = "[R]esume last Telescope Search"})
+vim.keymap.set('n', '<leader>ss', builtin.lsp_document_symbols, { desc = "[S]earch [S]ymbols"})
 -- LazyGit --
 vim.keymap.set('n', '<leader>og', ':LazyGit<cr>', { desc = "Open LazyGit" })

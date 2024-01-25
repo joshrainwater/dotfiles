@@ -104,7 +104,18 @@ require("lazy").setup({
             vim.g.splitjoin_php_method_chain_full = 1
         end
     },
+    {"nvim-lualine/lualine.nvim",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons"      
+        },
+        config = function ()
+            require("lualine").setup({
+                
+            })
+        end
+    },
 
+    -- Not sure if this one will stick around
     {"nvim-tree/nvim-tree.lua",
         dependencies = {
             "nvim-tree/nvim-web-devicons"      

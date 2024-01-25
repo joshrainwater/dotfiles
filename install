@@ -7,6 +7,9 @@ ln -s $DOTFILES/.bash_profile $HOME/.bash_profile
 
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
-   
+
+rm -rf $HOME/.inputrc
+ln -s $DOTFILES/.inputrc $HOME/.inputrc
+
 #   # Godot things
 #   https://gist.github.com/lucasecdb/2baf6d328a10d7fea9ec085d868923a0

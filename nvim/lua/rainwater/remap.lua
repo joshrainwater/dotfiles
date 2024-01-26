@@ -79,11 +79,14 @@ vim.api.nvim_create_user_command('LiveGrepGitRoot', live_grep_git_root, {})
 local builtin = require("telescope.builtin")
 
 vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = "[S]earch All [F]iles"})
+-- vim.keymap.set('n', '<leader>sF', function() builtin.find_files({no_ignore = true, hidden = true}) end, {desc = "[S]earch All [F]iles"})
 vim.keymap.set('n', '<leader>sg', builtin.git_files, { desc = "[S]earch [G]it Files" })
 vim.keymap.set('n', '<leader>so', builtin.oldfiles, { desc = "[S]earch [O]ld Files"})
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = "[S]earch [W]ord"})
-vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = "[S]earch [G]rep on Git Root"})
+-- vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = "[S]earch [G]rep on Git Root"})
+vim.keymap.set('n', '<leader>sG', function() require('telescope').extensions.live_grep_args.live_grep_args() end, { desc = "[S]earch [G]rep on Git Root"})
 vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = "[R]esume last Telescope Search"})
 vim.keymap.set('n', '<leader>ss', builtin.lsp_document_symbols, { desc = "[S]earch [S]ymbols"})
+
 -- LazyGit --
 vim.keymap.set('n', '<leader>og', ':LazyGit<cr>', { desc = "Open LazyGit" })

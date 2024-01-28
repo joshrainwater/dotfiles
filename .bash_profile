@@ -1,5 +1,5 @@
 export PATH=$PATH:~/.local/bin
-export DOTFILES=$HOME/dotfiles
+export DOTFILES=$HOME/code/dotfiles
 
 if [ -z "$SSH_AUTH_SOCK" ] ; then
 	  eval `ssh-agent -s`
@@ -19,7 +19,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Include aliases
-source $HOME/dotfiles/bash/.aliases
+source $DOTFILES/bash/.aliases
 
 # Colorize and Upgrade Basic Commands
 alias ls="ls -CF --color=auto"

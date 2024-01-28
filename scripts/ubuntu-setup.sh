@@ -4,6 +4,10 @@ aws-cli, all php stuff, git
 fzf, neovim, gcc, fzf
 node, nvm
 
+
+npm install -g typescript typescript-language-server
+
+
 ./install-lazygit.sh
 ./install-composer.sh
 

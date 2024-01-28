@@ -21,7 +21,7 @@ lsp_zero.on_attach(function(client, bufnr)
     })
 end)
 
-lsp_zero.setup_servers({'html', 'cssls', 'eslint', 'phpactor', 'volar', 'gdscript'})
+lsp_zero.setup_servers({'html', 'cssls', 'eslint', 'phpactor', 'tsserver', 'volar', 'gdscript'})
 
 local home = os.getenv('HOME')
 local dotfiles = os.getenv('DOTFILES')

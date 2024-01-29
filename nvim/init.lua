@@ -26,7 +26,6 @@ vim.opt.rtp:prepend(lazypath)
 -- [[ Configure plugins ]]
 require("lazy").setup("rainwater.lazy")
 
-require("rainwater.lsp")
 require("rainwater.remap")
 require("rainwater.set")
 require("rainwater.colorscheme")

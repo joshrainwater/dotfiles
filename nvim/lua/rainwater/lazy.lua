@@ -2,17 +2,6 @@ return {
     -- Git related plugins
     {"kdheepak/lazygit.nvim"},
 
-    -- Everything related to LSP
-    {'neovim/nvim-lspconfig',
-        dependencies = {
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
-            {'j-hui/fidget.nvim', opts = {} },
-            {'folke/neodev.nvim'},
-        }
-    },
-    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-
     -- Autocompletion
     {'hrsh7th/nvim-cmp', 
         dependencies = {

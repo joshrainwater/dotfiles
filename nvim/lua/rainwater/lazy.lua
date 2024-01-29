@@ -29,7 +29,4 @@ return {
             "kana/vim-textobj-user"
         }
     },
-
-    -- Colors
-    {"folke/tokyonight.nvim"},
 }

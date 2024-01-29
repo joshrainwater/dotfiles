@@ -30,8 +30,3 @@ require("rainwater.lsp")
 require("rainwater.remap")
 require("rainwater.set")
 require("rainwater.colorscheme")
-
--- I'll move this later.
-vim.g.codeium_disable_bindings = true
-
-

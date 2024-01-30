@@ -27,6 +27,10 @@ function dock {
 # Laravel
 alias a="php artisan"
 
+# Typescript
+alias t="npx ts-node ."
+alias tlive="npx onchange **/* -- npx ts-node ."
+
 # Just use the better version
 alias vi=nvim
 alias n="nvim ."

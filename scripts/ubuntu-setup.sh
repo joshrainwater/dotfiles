@@ -1,15 +1,20 @@
+#!/bin/sh
+
+# Github CLI
+type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo apt update \
+&& sudo apt install gh -y
+
 # Basic software
-apt-get install php8.2
-aws-cli, all php stuff, git
-fzf, neovim, gcc, fzf
+git fzf neovim gcc
+
+
+aws-cli,
 node, nvm
 
-
-npm install -g typescript typescript-language-server
-
-
 ./install-lazygit.sh
-./install-composer.sh
-
-# PHPActor install
-# php-cs-fixer install
+./install-php-environment.sh
+./install-js-environment.sh

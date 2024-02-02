@@ -26,6 +26,7 @@ function dock {
 
 # Laravel
 alias a="php artisan"
+alias sail="./vendor/bin/sail"
 
 # Typescript
 alias t="npx ts-node ."

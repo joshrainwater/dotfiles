@@ -7,11 +7,13 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # Git
-alias g="git"
-alias gs="git status"
-alias gb="git branch -avv"
-alias gh="git log --pretty=oneline --graph --decorate --all"
-alias gl="git log --oneline --no-merges"
+# I don't currently use these, and they interfere with github.
+# Commenting in case I find a use later.
+# alias g="git"
+# alias gs="git status"
+# alias gb="git branch -avv"
+# alias gh="git log --pretty=oneline --graph --decorate --all"
+# alias gl="git log --oneline --no-merges"
 
 # Docker
 alias d="docker"

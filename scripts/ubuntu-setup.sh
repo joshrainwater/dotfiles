@@ -2,7 +2,7 @@
 
 # Basic software
 sudo apt-get update
-sudo apt-get install openssl git fzf neovim gcc 
+sudo apt-get install openssl git fzf neovim gcc curl gnupg
 
 # Aws CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"

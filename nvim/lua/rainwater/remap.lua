@@ -12,10 +12,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "y", "myy`y")
 
 -- Global copy-paste to clipboard.
--- I don't think this works in WSL
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
+vim.keymap.set("v", "<leader>y", ":w !clip.exe<CR><CR>")
+-- vim.keymap.set("n", "<leader>y", "\"+y")
+-- vim.keymap.set("v", "<leader>y", "\"+y")
+-- vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- Easy append of semicolon and comma at end of line
 vim.keymap.set("i", ";;", "<Esc>A;")

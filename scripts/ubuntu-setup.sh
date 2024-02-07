@@ -34,3 +34,5 @@ mkdir ~/.local/bin
 ./install-js-environment.sh
 
 # Later: Install Go, Install Python
+
+exec bash -l

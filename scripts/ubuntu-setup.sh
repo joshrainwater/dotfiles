@@ -16,7 +16,7 @@ sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update -y && sudo apt upgrade -y
 
 # The basics
-sudo apt-get install openssl git fzf gcc g++ curl gnupg gh neovim zip unzip -y
+sudo apt-get install openssl git fzf gcc g++ curl gnupg gh neovim zip unzip sqlite3 -y
 
 # Aws CLI
 # not working?

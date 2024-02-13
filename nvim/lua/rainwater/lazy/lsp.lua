@@ -7,7 +7,7 @@ return {
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-cmdline',
-        'hrsh7th/nvim-cmp', 
+        'hrsh7th/nvim-cmp',
         'L3MON4D3/LuaSnip',
         'saadparwaiz1/cmp_luasnip',
         'j-hui/fidget.nvim',
@@ -23,8 +23,8 @@ return {
 
         require('fidget').setup()
         require('mason').setup()
-        require('mason-lspconfig').setup({ 
-            automatic_installation = true,
+        require('mason-lspconfig').setup({
+            -- automatic_installation = true,
             ensure_installed = {
                 "lua_ls",
                 "html",
@@ -63,7 +63,6 @@ return {
 
                     lspconfig.phpactor.setup({
                         capabilities = capabilities,
-                        on_attach = on_attach,
                         init_options = {
                             ["language_server_psalm.enabled"] = false,
                             ["language_server_php_cs_fixer.enabled"] = true,

@@ -9,6 +9,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Make sure the terminal inside neovim is logged in.
+vim.opt.shell = "bash -l"
+
 -- [[Install `lazy.nvim` plugin manager ]]
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

@@ -2,15 +2,8 @@ return {
     -- Git related plugins
     {"kdheepak/lazygit.nvim"},
 
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp', 
-        dependencies = {
-            {'L3MON4D3/LuaSnip'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'rafamadriz/friendly-snippets'},
-        }
-    },
+    -- Extra snippets
+    {'rafamadriz/friendly-snippets'},
 
     -- This is one I'm not sure I want to keep yet.
     {"windwp/nvim-autopairs", 

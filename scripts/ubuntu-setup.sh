@@ -19,7 +19,6 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt-get install openssl git fzf gcc g++ curl gnupg gh neovim zip unzip sqlite3 -y
 
 # Aws CLI
-# not working?
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install

@@ -30,8 +30,8 @@ return {
                 "html",
                 "cssls",
                 "phpactor",
-                "tsserver",
                 "volar",
+                "tailwindcss",
                 --"gdscript"
             },
             handlers = {
@@ -56,6 +56,14 @@ return {
                     }
                 end,
 
+                ["volar"] = function ()
+                    local lspconfig = require('lspconfig')
+                    lspconfig.volar.setup({
+                        capabilities = capabilities,
+                        filetypes = {'typescript', 'javascript', 'vue', 'json'}
+                    })
+                end,
+                
                 ["phpactor"] = function()
                     local lspconfig = require('lspconfig')
                     local home = os.getenv('HOME')

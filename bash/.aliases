@@ -34,6 +34,9 @@ alias sail="./vendor/bin/sail"
 alias t="npx ts-node ."
 alias tlive="npx onchange **/* -- npx ts-node ."
 
+# Go
+alias g="go run ."
+
 # Just use the better version
 alias vi=nvim
 alias n="nvim ."

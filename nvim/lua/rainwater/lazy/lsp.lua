@@ -32,6 +32,7 @@ return {
                 "phpactor",
                 "volar",
                 "tailwindcss",
+                "gopls"
                 --"gdscript"
             },
             handlers = {

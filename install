@@ -14,6 +14,8 @@ source $HOME/.bash_profile
 
 git config --global user.email ""
 git config --global user.name ""
+# Git Config
+git config --global credential.helper store
 
 #   # Godot things
 #   https://gist.github.com/lucasecdb/2baf6d328a10d7fea9ec085d868923a0

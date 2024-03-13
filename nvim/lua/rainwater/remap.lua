@@ -12,6 +12,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "y", "myy`y")
 
 -- Global copy-paste to clipboard.
+-- Windows version
 vim.keymap.set("v", "<leader>y", ":w !clip.exe<CR><CR>")
 -- vim.keymap.set("n", "<leader>y", "\"+y")
 -- vim.keymap.set("v", "<leader>y", "\"+y")
@@ -22,9 +23,6 @@ vim.keymap.set("i", ";;", "<Esc>A;")
 vim.keymap.set("i", ",,", "<Esc>A,")
 
 vim.keymap.set("n", "Q", "<nop>")
-
--- NvimTreeToggle
-vim.keymap.set("n", "<leader>n", vim.cmd.NvimTreeFindFileToggle)
 
 -- Quickfix menu
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -37,6 +35,3 @@ vim.keymap.set("n", "<C-q>", vim.cmd.cclose)
 vim.keymap.set("n", "<leader>S", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
-
--- LazyGit --
-vim.keymap.set('n', '<leader>og', ':LazyGit<cr>', { desc = "Open LazyGit" })

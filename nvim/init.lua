@@ -31,3 +31,4 @@ require("lazy").setup("rainwater.lazy")
 
 require("rainwater.remap")
 require("rainwater.set")
+require("rainwater.commands")

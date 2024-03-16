@@ -16,7 +16,7 @@ sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update -y && sudo apt upgrade -y
 
 # The basics
-sudo apt-get install openssl git fzf gcc g++ curl gnupg gh neovim zip unzip sqlite3 neofetch powerline -y
+sudo apt-get install openssl git fzf gcc g++ curl gnupg gh neovim zip unzip sqlite3 zoxide neofetch powerline -y
 
 # Aws CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"

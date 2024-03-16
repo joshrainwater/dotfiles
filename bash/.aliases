@@ -37,6 +37,8 @@ alias tlive="npx onchange **/* -- npx ts-node ."
 # Go
 alias g="go run ."
 alias air="~/go/bin/air"
+alias got="go test ./..."
+alias gotv="go test ./... -v"
 
 # Just use the better version
 alias vi=nvim

@@ -8,7 +8,7 @@ return {
         vim.keymap.set('i', '<C-x>', function () return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
 
         vim.g.codeium_disable_bindings = true
-        vim.g.enable_codeium = false 
+        vim.g.codeium_manual = true
 
     end,
     opts = {

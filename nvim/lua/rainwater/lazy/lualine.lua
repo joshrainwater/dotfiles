@@ -9,13 +9,7 @@ return {
             section_separators = '',
             component_separators = '',
             globalstatus = true,
-            theme = {
-                normal = {
-                    a = 'StatusLine',
-                    b = 'StatusLine',
-                    c = 'StatusLine',
-                },
-            },
+            theme = "catppucin",
         },
         sections = {
           lualine_a = {
@@ -30,10 +24,13 @@ return {
             -- function ()
             --   return '󰅭 ' .. vim.pesc(tostring(#vim.tbl_keys(vim.lsp.buf_get_clients())) or '')
             -- end,
-            -- { 'diagnostics', sources = { 'nvim_diagnostic' } },
+            { 'diagnostics', sources = { 'nvim_diagnostic' } },
           },
           lualine_c = {
-            'filename'
+            {
+              'filename',
+              path = 1
+            }
           },
           lualine_x = {
             {
@@ -46,7 +43,7 @@ return {
             'filetype',
             'encoding',
             --'fileformat',
-            --'(vim.bo.expandtab and "␠ " or "⇥ ") .. vim.bo.shiftwidth',
+            '(vim.bo.expandtab and "␠ " or "⇥ ") .. vim.bo.shiftwidth',
           },
           lualine_z = {
             'searchcount',

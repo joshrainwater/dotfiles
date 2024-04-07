@@ -8,7 +8,7 @@ return {
         options = {
             component_separators = '',
             globalstatus = true,
-            theme = "catppucin",
+            theme = "catppuccin",
         },
         sections = {
           lualine_a = {

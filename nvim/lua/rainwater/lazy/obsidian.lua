@@ -17,5 +17,6 @@ return {
                 path = "~/code/second-brain"
             },
         },
+        disable_frontmatter = true
     },
 }

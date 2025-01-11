@@ -26,6 +26,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- The Obsidian plugin requires a different conceallevel for UI
+vim.opt.conceallevel = 2
+
 -- [[ Configure plugins ]]
 require("lazy").setup("rainwater.lazy")
 

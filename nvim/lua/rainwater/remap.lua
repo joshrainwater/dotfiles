@@ -13,10 +13,12 @@ vim.keymap.set("v", "y", "myy`y")
 
 -- Global copy-paste to clipboard.
 -- Windows version
-vim.keymap.set("v", "<leader>y", ":w !clip.exe<CR><CR>")
+-- vim.keymap.set("v", "<leader>y", ":w !clip.exe<CR><CR>")
 -- vim.keymap.set("n", "<leader>y", "\"+y")
 -- vim.keymap.set("v", "<leader>y", "\"+y")
 -- vim.keymap.set("n", "<leader>Y", "\"+Y")
+-- Linux version
+vim.keymap.set("v", "<leader>y", ":w !xclip -sel c<CR><CR>")
 
 -- Easy append of semicolon and comma at end of line
 vim.keymap.set("i", ";;", "<Esc>A;")

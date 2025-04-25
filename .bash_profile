@@ -1,5 +1,5 @@
 export PATH=$PATH:~/.local/bin:~/.config/composer/vendor/bin:/usr/local/go/bin
-export DOTFILES=$HOME/code/dotfiles
+export DOTFILES=$HOME/dotfiles
 
 if [ -z "$SSH_AUTH_SOCK" ] ; then
 	  eval `ssh-agent -s`
@@ -7,19 +7,19 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
 fi
 
 # Windows Powerline Setup.
-if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
-  powerline-daemon -q
-  POWERLINE_BASH_CONTINUATION=1
-  POWERLINE_BASH_SELECT=1
-  source /usr/share/powerline/bindings/bash/powerline.sh
-fi
+# if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
+#   powerline-daemon -q
+#   POWERLINE_BASH_CONTINUATION=1
+#   POWERLINE_BASH_SELECT=1
+#   source /usr/share/powerline/bindings/bash/powerline.sh
+# fi
 
 # Zoxide setup script
 eval "$(zoxide init bash)"
 
 # Get nvm loaded
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Include aliases
 source $DOTFILES/bash/.aliases

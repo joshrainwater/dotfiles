@@ -30,7 +30,6 @@ return {
                 "html",
                 "cssls",
                 "phpactor",
-                "volar",
                 "tailwindcss",
                 "gopls",
                 "sqls"

@@ -26,18 +26,20 @@ return {
         require('mason-lspconfig').setup({
             automatic_installation = true,
             ensure_installed = {
-                "lua_ls",
-                "html",
                 "cssls",
-                "phpactor",
-                "tailwindcss",
+                "dockerls",
                 "gopls",
-                "sqls"
+                "html",
+                -- "htmx",
+                "lua_ls",
+                "phpactor",
+                "sqls",
+                "tailwindcss",
+                "vuels",
                 --"gdscript"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
-
                     require("lspconfig")[server_name].setup {
                         capabilities = capabilities
                     }
@@ -57,11 +59,11 @@ return {
                     }
                 end,
 
-                ["volar"] = function ()
+                ["vuels"] = function()
                     local lspconfig = require('lspconfig')
-                    lspconfig.volar.setup({
+                    lspconfig.vuels.setup({
                         capabilities = capabilities,
-                        filetypes = {'typescript', 'javascript', 'vue', 'json'}
+                        filetypes = { 'typescript', 'javascript', 'vue', 'json' }
                     })
                 end,
 
@@ -78,7 +80,7 @@ return {
                             ["language_server_php_cs_fixer.bin"] = home .. "/.local/bin/php-cs-fixer",
                             ["language_server_php_cs_fixer.config"] = dotfiles .. "/php/php-cs-fixer.laravel.php"
                         }
-                     })
+                    })
                 end
             }
         })
@@ -97,9 +99,9 @@ return {
         vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
 
         if vim.lsp.buf.range_code_action then
-        vim.keymap.set('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
+            vim.keymap.set('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
         else
-        vim.keymap.set('x', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+            vim.keymap.set('x', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
         end
 
         vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')

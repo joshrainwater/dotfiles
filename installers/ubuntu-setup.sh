@@ -26,12 +26,3 @@ rm -rf aws awscliv2.zip
 
 # Because this doesn't exist by default
 mkdir ~/.local/bin
-
-# Run the other scripts.
-./install-lazygit.sh
-./install-php-environment.sh
-./install-js-environment.sh
-
-# Later: Install Go, Install Python
-
-exec bash -l

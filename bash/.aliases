@@ -30,6 +30,7 @@ alias g="go run ."
 alias air="~/go/bin/air"
 alias got="go test ./..."
 alias gotv="go test ./... -v"
+alias w="wails dev"
 
 # Just use the better version
 alias vi=nvim

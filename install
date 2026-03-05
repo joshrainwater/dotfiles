@@ -12,10 +12,28 @@ ln -s $DOTFILES/.inputrc $HOME/.inputrc
 
 source $HOME/.bash_profile
 
-git config --global user.email ""
-git config --global user.name ""
+# Load local settings if they exist
+if [ -f "$DOTFILES/.env.local" ]; then
+    source "$DOTFILES/.env.local"
+fi
+
 # Git Config
+if [ -n "$GIT_USER_EMAIL" ]; then
+    git config --global user.email "$GIT_USER_EMAIL"
+fi
+
+if [ -n "$GIT_USER_NAME" ]; then
+    git config --global user.name "$GIT_USER_NAME"
+fi
+
 git config --global credential.helper store
 
-#   # Godot things
-#   https://gist.github.com/lucasecdb/2baf6d328a10d7fea9ec085d868923a0
+# Run installers
+"$DOTFILES/installers/ubuntu-setup.sh"
+"$DOTFILES/installers/php-environment.sh"
+"$DOTFILES/installers/js-environment.sh"
+"$DOTFILES/installers/go.sh"
+"$DOTFILES/installers/composer.sh"
+"$DOTFILES/installers/lazygit.sh"
+
+exec bash -l

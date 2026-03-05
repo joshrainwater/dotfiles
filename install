@@ -44,4 +44,8 @@ if [ "$INSTALL_GO" = "true" ]; then
     "$DOTFILES/installers/go.sh"
 fi
 
+if [ "$INSTALL_APPS" = "true" ]; then
+    "$DOTFILES/installers/apps.sh"
+fi
+
 exec bash -l

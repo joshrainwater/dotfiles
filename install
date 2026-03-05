@@ -30,10 +30,19 @@ git config --global credential.helper store
 
 # Run installers
 "$DOTFILES/installers/ubuntu-setup.sh"
-"$DOTFILES/installers/php-environment.sh"
-"$DOTFILES/installers/js-environment.sh"
-"$DOTFILES/installers/go.sh"
-"$DOTFILES/installers/composer.sh"
+
+if [ "$INSTALL_PHP" = "true" ]; then
+    "$DOTFILES/installers/php.sh"
+fi
+
+if [ "$INSTALL_JAVASCRIPT" = "true" ]; then
+    "$DOTFILES/installers/javascript.sh"
+fi
+
+if [ "$INSTALL_GO" = "true" ]; then
+    "$DOTFILES/installers/go.sh"
+fi
+
 "$DOTFILES/installers/lazygit.sh"
 
 exec bash -l

@@ -6,7 +6,18 @@ curl -LSs https://box-project.github.io/box2/installer.php | php
 mv box.phar ~/.local/bin/box
 
 # Composer
-./install-composer.sh
+EXPECTED_CHECKSUM="$(php -r 'copy("https://composer.github.io/installer.sig", "php://stdout");')"
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+ACTUAL_CHECKSUM="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
+
+if [ "$EXPECTED_CHECKSUM" != "$ACTUAL_CHECKSUM" ]
+then
+    >&2 echo 'ERROR: Invalid installer checksum'
+    rm composer-setup.php
+else
+    php composer-setup.php --install-dir="$HOME/.local/bin" --filename="composer" --quiet
+    rm composer-setup.php
+fi
 
 # PHPActor install
 curl -Lo phpactor.phar https://github.com/phpactor/phpactor/releases/latest/download/phpactor.phar

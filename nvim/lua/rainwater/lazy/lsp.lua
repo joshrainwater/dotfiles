@@ -30,13 +30,12 @@ return {
                 "dockerls",
                 "gopls",
                 "html",
-                -- "htmx",
                 "lua_ls",
                 "phpactor",
                 "sqls",
                 "tailwindcss",
+                "ts_ls",
                 "vuels",
-                --"gdscript"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -59,11 +58,19 @@ return {
                     }
                 end,
 
+                ["ts_ls"] = function()
+                    local lspconfig = require('lspconfig')
+                    lspconfig.ts_ls.setup({
+                        capabilities = capabilities,
+                        filetypes = { 'typescript', 'typescriptreact' }
+                    })
+                end,
+
                 ["vuels"] = function()
                     local lspconfig = require('lspconfig')
                     lspconfig.vuels.setup({
                         capabilities = capabilities,
-                        filetypes = { 'typescript', 'javascript', 'vue', 'json' }
+                        filetypes = { 'vue', 'json' }
                     })
                 end,
 

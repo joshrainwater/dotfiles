@@ -11,3 +11,9 @@ wget -qO- https://packages.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/google-antigravity.gpg] https://packages.google.com/apt/antigravity stable main" | sudo tee /etc/apt/sources.list.d/antigravity.list > /dev/null
 sudo apt update -y
 sudo apt install antigravity -y
+
+# Ghostty
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
+
+# OpenCode
+curl -fsSL https://opencode.ai/install | bash

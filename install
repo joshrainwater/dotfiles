@@ -1,16 +1,6 @@
 #!/usr/bin/env bash
 DOTFILES=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
-rm -rf $HOME/.bash_profile
-ln -s $DOTFILES/.bash_profile $HOME/.bash_profile
-
-rm -rf $HOME/.config/nvim
-ln -s $DOTFILES/nvim $HOME/.config/nvim
-
-rm -rf $HOME/.inputrc
-ln -s $DOTFILES/.inputrc $HOME/.inputrc
-
-source $HOME/.bash_profile
 
 # Load local settings if they exist
 if [ -f "$DOTFILES/.env.local" ]; then
@@ -44,8 +34,23 @@ if [ "$INSTALL_GO" = "true" ]; then
     "$DOTFILES/installers/go.sh"
 fi
 
+if [ "$INSTALL_DOCKER" = "true" ]; then
+    "$DOTFILES/installers/docker.sh"
+fi
+
 if [ "$INSTALL_APPS" = "true" ]; then
     "$DOTFILES/installers/apps.sh"
 fi
+
+rm -rf $HOME/.bash_profile
+ln -s $DOTFILES/.bash_profile $HOME/.bash_profile
+
+rm -rf $HOME/.config/nvim
+ln -s $DOTFILES/nvim $HOME/.config/nvim
+
+rm -rf $HOME/.inputrc
+ln -s $DOTFILES/.inputrc $HOME/.inputrc
+
+source $HOME/.bash_profile
 
 exec bash -l

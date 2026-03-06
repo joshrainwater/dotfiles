@@ -13,7 +13,7 @@ sudo apt update -y
 sudo apt install antigravity -y
 
 # Ghostty
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
 
 # OpenCode
 curl -fsSL https://opencode.ai/install | bash

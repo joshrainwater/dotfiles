@@ -21,15 +21,15 @@ git config --global credential.helper store
 "$DOTFILES/installers/ubuntu-setup.sh"
 "$DOTFILES/installers/lazygit.sh"
 
-if [ "$INSTALL_PHP" = "true" ]; then
+if [ "$LANGUAGE_PHP" = "true" ]; then
     "$DOTFILES/installers/php.sh"
 fi
 
-if [ "$INSTALL_JAVASCRIPT" = "true" ]; then
+if [ "$LANGUAGE_JAVASCRIPT" = "true" ]; then
     "$DOTFILES/installers/javascript.sh"
 fi
 
-if [ "$INSTALL_GO" = "true" ]; then
+if [ "$LANGUAGE_GO" = "true" ]; then
     "$DOTFILES/installers/go.sh"
 fi
 
@@ -37,7 +37,7 @@ if [ "$INSTALL_DOCKER" = "true" ]; then
     "$DOTFILES/installers/docker.sh"
 fi
 
-if [ "$INSTALL_APPS" = "true" ]; then
+if [ "$APPS_OBSIDIAN" = "true" ] || [ "$APPS_ANTIGRAVITY" = "true" ] || [ "$APPS_GHOSTTY" = "true" ] || [ "$APPS_OPENCODE" = "true" ]; then
     "$DOTFILES/installers/apps.sh"
 fi
 

@@ -17,17 +17,30 @@ cp .env.local.example .env.local
 ./install
 ```
 
-## Optional Installers
+## Languages
 
 Set these in `.env.local` before running `./install`:
 
 | Variable | Description |
 |----------|-------------|
-| `INSTALL_PHP` | PHP 8.4, Composer, Laravel installer, PHP Actor, PHP CS Fixer |
-| `INSTALL_JAVASCRIPT` | Node.js via nvm, TypeScript, TypeScript Language Server |
-| `INSTALL_GO` | Go 1.26, Air (live reload), Wails |
+| `LANGUAGE_PHP` | PHP 8.4, Composer, Laravel installer, PHP Actor, PHP CS Fixer |
+| `LANGUAGE_JAVASCRIPT` | Node.js via nvm, TypeScript, TypeScript Language Server |
+| `LANGUAGE_GO` | Go 1.26, Air (live reload), Wails |
+
+## Optional Installers
+
+| Variable | Description |
+|----------|-------------|
 | `INSTALL_DOCKER` | Docker Engine, Docker Compose |
-| `INSTALL_APPS` | Desktop apps (Obsidian, Antigravity, Ghostty, OpenCode) |
+
+## Apps
+
+| Variable | Description |
+|----------|-------------|
+| `APPS_OBSIDIAN` | Obsidian |
+| `APPS_ANTIGRAVITY` | Antigravity |
+| `APPS_GHOSTTY` | Ghostty |
+| `APPS_OPENCODE` | OpenCode |
 
 ## Usage
 

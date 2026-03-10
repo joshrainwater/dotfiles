@@ -1,4 +1,4 @@
-export PATH=$PATH:~/.local/bin:~/.config/composer/vendor/bin:/usr/local/go/bin
+export PATH=$PATH:~/.local/bin:~/.config/composer/vendor/bin:/usr/local/go/bin:$HOME/go/bin
 export DOTFILES=$HOME/dotfiles
 
 if [ -z "$SSH_AUTH_SOCK" ] ; then

@@ -12,7 +12,7 @@ fi
 eval "$(zoxide init bash)"
 
 # Set DOTFILES and PATH (for non-login interactive shells)
-export PATH=$PATH:~/.local/bin:~/.config/composer/vendor/bin:/usr/local/go/bin
+export PATH=$PATH:~/.local/bin:~/.config/composer/vendor/bin:/usr/local/go/bin:$HOME/go/bin
 export DOTFILES=$HOME/dotfiles
 
 # NVM

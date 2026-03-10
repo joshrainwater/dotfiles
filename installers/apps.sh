@@ -25,3 +25,8 @@ if [ "$APPS_OPENCODE" = true ]; then
   echo "Installing OpenCode..."
   curl -fsSL https://opencode.ai/install | bash
 fi
+
+if [ "$APPS_OLLAMA" = true ]; then
+  echo "Installing Ollama..."
+  curl -fsSL https://ollama.com/install.sh | sh
+fi

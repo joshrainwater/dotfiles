@@ -17,22 +17,31 @@ function dock {
     docker exec -it $1 /bin/bash;	
 }
 
-# Laravel
-alias a="php artisan"
-alias sail="./vendor/bin/sail"
+# Use the better version
+alias vi=nvim
+alias n="nvim ."
+alias ls="eza --icons"
+alias ll="eza -l --icons"
 
-# Typescript
-alias t="npx ts-node ."
-alias tlive="npx onchange **/* -- npx ts-node ."
+# alias cat="bat"
+# alias grep="rg"
+# alias find="fd"
+# alias cd="z"
+# alias top="btop"
 
-# Go
+# Language-specific:
+
+## Laravel
+# alias a="php artisan"
+# alias sail="./vendor/bin/sail"
+
+## Typescript
+# alias t="npx ts-node ."
+# alias tlive="npx onchange **/* -- npx ts-node ."
+
+## Go
 alias g="go run ."
 alias air="~/go/bin/air"
 alias got="go test ./..."
 alias gotv="go test ./... -v"
 alias w="wails dev"
-
-# Just use the better version
-alias vi=nvim
-alias n="nvim ."
-alias top=htop

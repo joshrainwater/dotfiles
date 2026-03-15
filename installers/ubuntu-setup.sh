@@ -16,6 +16,7 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt-get install openssl git gcc g++ curl gnupg zip unzip sqlite3 -y #Basics
 sudo apt-get install gh neovim -y #Apps
 sudo apt-get install fzf zoxide neofetch ripgrep fd-find eza bat btop git-delta -y #Better Utils
+sudo apt-get install libgtk-3-dev libwebkit2gtk-4.1-dev -y #Wails3
 
 # Aws CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"

@@ -9,3 +9,6 @@ rm go.tar.gz
 
 # Install Wails
 /usr/local/go/bin/go install github.com/wailsapp/wails/v2/cmd/wails@latest
+
+# Install Wails v3
+/usr/local/go/bin/go install github.com/wailsapp/wails/v3/cmd/wails3@latest

@@ -6,6 +6,10 @@ if [ -f "$DOTFILES/.env.local" ]; then
     source "$DOTFILES/.env.local"
 fi
 
+if [ -z "$DISTRO" ]; then
+    DISTRO=ubuntu
+fi
+
 # Git Config
 if [ -n "$GIT_USER_EMAIL" ]; then
     git config --global user.email "$GIT_USER_EMAIL"
@@ -17,13 +21,9 @@ fi
 
 git config --global credential.helper store
 
-# Run installers
-"$DOTFILES/installers/ubuntu-setup.sh"
+# Run distro-specific setup
+"$DOTFILES/installers/${DISTRO}-setup.sh"
 "$DOTFILES/installers/lazygit.sh"
-
-if [ "$LANGUAGE_PHP" = "true" ]; then
-    "$DOTFILES/installers/php.sh"
-fi
 
 if [ "$LANGUAGE_JAVASCRIPT" = "true" ]; then
     "$DOTFILES/installers/javascript.sh"
@@ -31,10 +31,6 @@ fi
 
 if [ "$LANGUAGE_GO" = "true" ]; then
     "$DOTFILES/installers/go.sh"
-fi
-
-if [ "$INSTALL_DOCKER" = "true" ]; then
-    "$DOTFILES/installers/docker.sh"
 fi
 
 if [ "$APPS_OBSIDIAN" = "true" ] || [ "$APPS_ANTIGRAVITY" = "true" ] || [ "$APPS_GHOSTTY" = "true" ] || [ "$APPS_OPENCODE" = "true" ]; then

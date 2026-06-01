@@ -20,8 +20,8 @@ function dock {
 # Use the better version
 alias vi=nvim
 alias n="nvim ."
-alias ls="eza --icons"
-alias ll="eza -l --icons"
+# alias ls="eza --icons"
+# alias ll="eza -l --icons"
 
 # alias cat="bat"
 # alias grep="rg"

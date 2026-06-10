@@ -14,6 +14,8 @@ vim.keymap.set("v", "y", "myy`y")
 -- Global copy-paste to clipboard.
 if vim.fn.executable("clip.exe") == 1 then
     vim.keymap.set("v", "<leader>y", ":w !clip.exe<CR><CR>")
+elseif vim.fn.executable("wl-copy") == 1 then
+    vim.keymap.set("v", "<leader>y", ":w !wl-copy<CR><CR>")
 elseif vim.fn.executable("xclip") == 1 then
     vim.keymap.set("v", "<leader>y", ":w !xclip -sel c<CR><CR>")
 else
